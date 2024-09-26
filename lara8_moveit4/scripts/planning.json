@@ -1,7 +1,7 @@
 {
     "human_working":false,
     "selected_element" : "element3",
-    "planning_sequence": ["moveto(home)", "holding", "picking",  "placing", "moveto(home)"], 
+    "planning_sequence": ["moveto(home)", "holding", "picking", "moveto(home)", "placing", "moveto(home)"], 
     "robot_report" :  "not implemented yet!!!"
 
 }
