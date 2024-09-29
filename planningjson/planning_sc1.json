@@ -1,0 +1,37 @@
+{
+    "human_working": false,
+    "selected_element": "element3",
+    "planning_sequence": [
+        "moveto(home)",
+        "holding",
+        "picking",
+        "moveto(home)",
+        "placing",
+        "moveto(home)"
+    ],
+    "robot_report": [
+        "Successfully moved to home postion.",
+        "Successfully moved to pose_element_offset postion.",
+        "the robot reaches the offset traget plane with 0 degree rotation ",
+        "Robot is holding successfully.",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is picking successfully.",
+        "Successfully moved to home postion.",
+        "Successfully moved to safepoint postion.",
+        "Successfully moved to storage_offset postion.",
+        " element3 is released from robot ",
+        "Successfully moved to safepoint postion.",
+        " element3 is disassembled successfully! ",
+        "Successfully moved to home postion.",
+        "Successfully moved to home postion."
+    ]
+}
