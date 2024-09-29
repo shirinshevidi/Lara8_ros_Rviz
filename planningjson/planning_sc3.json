@@ -1,0 +1,26 @@
+{
+    "human_working": false,
+    "selected_element": "element3",
+    "planning_sequence": [
+        "moveto(home)",
+        "holding",
+        "moveto(home)"
+    ],
+    "robot_report": [
+        "Successfully moved to home postion.",
+        "Successfully moved to pose_element_offset postion.",
+        "the traget with 0 degree rotation is not reachable",
+        "Successfully moved to pose_element_offset postion.",
+        "the robot reaches the offset traget plane with 90 degree rotation ",
+        "Failed to the support element with 90 degree rotation from target plane",
+        "Successfully moved to pose_element_offset postion.",
+        "the robot reaches the offset traget plane with 180 degree rotation ",
+        "the first defined target was not reachable but finally  Robot holds successfully with 180 degree rotation ",
+        "Robot is Waiting for human... ",
+        "Robot is Waiting for human... ",
+        "Robot is releasing element3 ",
+        " element3 is released from robot ",
+        "Successfully moved to home postion.",
+        "Successfully moved to home postion."
+    ]
+}
