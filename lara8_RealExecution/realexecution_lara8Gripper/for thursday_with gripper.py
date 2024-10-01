@@ -13,8 +13,8 @@ import logging
 import binascii
 from time import sleep  # for gripper control
 
-#_IMPORTANT-2 - Start the gripper before running this script; try changing the port number from COM4 to COM3 or COM5 if it doesn't work
-ser = serial.Serial(port='COM4', baudrate=115200, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
+#_IMPORTANT-2 - Start the gripper before running this script; try changing the port number from COM4 to COM3 or COM5 if it doesn't work. shirin is com7
+ser = serial.Serial(port='COM7', baudrate=115200, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
 
 def control_gripper(close=True):
     if close:
@@ -47,7 +47,7 @@ print(r.connection)
 print(r.version)
 
 # Load the JSON file (replace 'path_to_json_file.json' with the actual path)
-with open(r'C:\myfiles\university\thesis\second_semester\final_review\lara\joint_states_withgripper.json') as f:
+with open(r'C:\myfiles\university\thesis\second_semester\final_review\lara\joint_states_withgripper_every_50th.json') as f:
     json_data = json.load(f)
 
 # Initialize variables for gripper status tracking
@@ -55,10 +55,11 @@ previous_gripper_status = False  # Initially set to False
 
 # Ensure the gripper is closed initially
 control_gripper(close=False)  # Call it before starting the movement loop
-
+#control_gripper(close=True)
 print("Starting the robot")
 # Iterate over the dictionaries in the JSON array
 for record in json_data:
+#for record in json_data[::10]: 
     # Extract the position data
     position = record.get('position', [])
     gripper_status = record.get('gripper', False)
@@ -78,6 +79,8 @@ for record in json_data:
         "current_joint_angles": r.get_current_joint_angles()
     }
     r.move_joint(**joint_property)
+    gripper_status = record.get('gripper', False)
+    print (position)
 
 r.stop()  # if there are multiple motions then this needs to be called
 print("Finish")
